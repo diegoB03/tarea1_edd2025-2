@@ -1,56 +1,35 @@
 # RESPUESTAS
 
-## Pregunta 3 — ¿Qué utilidad tiene utilizar tecnologías como git, en especial una plataforma como GitHub, como repositorio para su proyecto? ¿De qué manera agrega valor al desarrollo en conjunto de 3 o más personas?
-
-**Resumen:** Git (sistema de control de versiones distribuido) y GitHub (plataforma colaborativa sobre Git) permiten trabajo paralelo seguro, **historial trazable**, **revisión por pares (pull requests)**, **ramificación/merge eficientes**, **resolución de conflictos** y **automatización del flujo de trabajo**. En equipos de 3+ personas esto reduce fricciones, mejora la calidad del código y acelera entregas.
-
-### 1) Beneficios de usar Git (DVCS)
-- **Trabajo distribuido y offline**: cada integrante tiene el historial completo local, puede *commit/branch/merge* sin conexión y sincronizar después. Esto hace rápidas las operaciones y resiliente al fallo del servidor. [1][2][6]
-- **Ramas baratas + merges eficientes**: facilita *feature branches* y flujos como *Git Flow*, apoyando desarrollo paralelo sin bloquear a otros. [2][6]
-- **Historial y recuperación**: registro completo y confiable de cambios; fácil volver a estados anteriores. [5]
-- **Escalabilidad en equipos**: DVCS mejora la colaboración en equipos grandes y geográficamente distribuidos. [4][6]
-
-### 2) ¿Qué agrega GitHub específicamente?
-- **Pull Requests (PRs) y *code reviews***: propuesta de cambios con discusión, *diffs* y aprobaciones requeridas antes de mezclar a la rama principal. [3][7][8]
-- **Gestión de permisos y protección de ramas**: políticas para exigir *reviews* y validar *status checks* antes de *merge*. [3]
-- **Comunicación integrada**: comentarios en líneas de código, conversación por cambio, historial de decisiones.
-- **Visibilidad y trazabilidad**: quién cambió qué y cuándo; útil para auditoría y responsabilidad técnica. [9]
-- **Ecosistema**: wikis, Issues, Projects y CI/CD (Actions) que automatiza pruebas y despliegues.
-
-### 3) ¿Cómo mejora el trabajo en equipos de 3+ personas?
-- **Paralelismo seguro**: cada integrante trabaja en su rama sin pisar a otros; luego integra por PR con *reviews* que elevan la calidad.
-- **Menos conflictos y mejor resolución**: el *branching model* acota superficies de conflicto; cuando existen, Git soporta *merge tools* eficientes. [2]
-- **Velocidad y calidad**: *reviews* obligatorias + integración frecuente reducen defectos y tiempos de entrega. [3][6]
-- **Transparencia y responsabilidad**: *blame/log* y PRs documentan decisiones y autores, lo que mejora la coordinación. [9]
-- **Onboarding y continuidad**: el historial y los PRs sirven como documentación viva; bajar/continuar el trabajo es más simple.
-
-### 4) Flujo sugerido para su Tarea
-1. **Ramas**: `main` protegida; ramas `feat/…`, `fix/…`, `docs/…` por persona/tarea.
-2. **PRs con revisión**: al menos 1 aprobación; ejecutar pruebas antes de mezclar.
-3. **Commits atómicos** y mensajes claros (*imperative mood*).
-4. **Issues** para dividir el trabajo y asignar responsables; cierre automático con `Fixes #N`.
-5. **README** y **RESPUESTAS.md** versionados; usar Releases para congelar la entrega.
+## Pregunta 1
+El archivo **README.md** es clave porque permite entender de inmediato de qué trata el proyecto, cómo se usa y qué requisitos tiene. Para alguien que no estuvo desde el inicio, entrega una guía básica: explica qué hace el código, cómo compilarlo, en qué sistema operativo funciona y cuáles son las instrucciones mínimas para poder ejecutarlo. Sin este archivo, una persona nueva tendría que revisar todo el código para adivinar su funcionamiento.  
 
 ---
 
-### Fuentes
-[1] GitLab — Ventajas de los DVCS.  
-[2] Atlassian — *Why Git (branching, merges, feature workflow)*.  
-[3] GitHub Docs — *About pull request reviews* (revisiones obligatorias).  
-[4] GeeksforGeeks — CVCS vs DVCS (ventajas para equipos grandes).  
-[5] Pro Git (git-scm.com) — Sobre control de versiones (recuperación/historial).  
-[6] Atlassian — *What is Git* (DVCS, operaciones locales rápidas).  
-[7] GitHub Docs — *About pull requests* (discusión y diffs).  
-[8] GitHub Docs — *Reviewing proposed changes* (revisión de commits y archivos).  
-[9] APHRC (2025) — Colaboración, transparencia y atribución con Git/GitHub.
+## Pregunta 2
+Un **Makefile** simplifica mucho la compilación y el uso del programa. En vez de tener que escribir siempre los mismos comandos largos de compilación o ejecución, se puede usar directamente `make`, `make run` o `make clean`. Para otros usuarios es una ayuda porque cualquiera puede compilar el código sin conocer los detalles del compilador ni las banderas usadas.  
+Además, no solo se limita a C++; también puede aplicarse en otros lenguajes como Fortran, Rust, Go o Java, siempre que se definan las reglas adecuadas. Eso sí, hay que tener cuidado con las rutas y la portabilidad para que funcione en distintos sistemas operativos.  
 
-> Referencias detalladas:
-> - [1] https://about.gitlab.com/topics/version-control/benefits-distributed-version-control-system/  
-> - [2] https://www.atlassian.com/git/tutorials/why-git  
-> - [3] https://docs.github.com/articles/about-pull-request-reviews  
-> - [4] https://www.geeksforgeeks.org/git/centralized-vs-distributed-version-control-which-one-should-we-choose/  
-> - [5] https://git-scm.com/book/ms/v2/Getting-Started-About-Version-Control  
-> - [6] https://www.atlassian.com/git/tutorials/what-is-git  
-> - [7] https://docs.github.com/articles/about-pull-requests  
-> - [8] https://docs.github.com/articles/reviewing-proposed-changes-in-a-pull-request  
-> - [9] https://aphrc.org/wp-content/uploads/2025/06/Overcoming-challenges.pdf
+---
+
+## Pregunta 3
+El uso de **git** y de una plataforma como **GitHub** da orden y seguridad en el trabajo en equipo. Git permite tener un historial completo de cambios, trabajar en ramas separadas y volver atrás si algo falla. GitHub agrega herramientas de colaboración: revisiones de código mediante *pull requests*, control de permisos, seguimiento de tareas con Issues y la posibilidad de automatizar pruebas.  
+En un grupo de tres o más personas, esto se traduce en que todos pueden trabajar en paralelo sin pisarse el trabajo, los errores se detectan antes gracias a las revisiones, y queda un registro claro de quién hizo qué y cuándo.  
+
+---
+
+## Pregunta 4
+Documentar las funciones dentro del código es muy útil porque facilita entender qué hace cada una sin tener que leer toda la implementación. Esto ayuda a que otro programador pueda mantener o modificar el código sin problemas, y también evita confusiones en el futuro.  
+No documentar significa depender solo del autor original: otros tendrán que invertir más tiempo en comprenderlo, lo que aumenta la probabilidad de cometer errores al modificarlo.  
+
+---
+
+## Pregunta 5
+Las cuatro herramientas mencionadas se complementan muy bien:  
+- El **README.md** entrega la explicación inicial.  
+- El **Makefile** hace que compilar y ejecutar sea rápido y estandarizado.  
+- **Git** permite llevar un control seguro de la evolución del código.  
+- **GitHub** facilita la colaboración entre varias personas y mantiene todo centralizado.  
+
+En conjunto logran que el proyecto sea más claro, mantenible y fácil de usar para personas externas. Gracias a ellas se garantiza que el código se pueda reproducir, compartir y mejorar de manera ordenada y eficiente.  
+
+---
