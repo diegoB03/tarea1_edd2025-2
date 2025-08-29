@@ -1,8 +1,8 @@
 # RESPUESTAS
 
-## Pregunta 3 — ¿Qué utilidad tiene utilizar tecnologías como *git*, en especial una plataforma como GitHub, como repositorio para su proyecto? ¿De qué manera agrega valor al desarrollo en conjunto de 3 o más personas?
+## Pregunta 3 — ¿Qué utilidad tiene utilizar tecnologías como git, en especial una plataforma como GitHub, como repositorio para su proyecto? ¿De qué manera agrega valor al desarrollo en conjunto de 3 o más personas?
 
-**Resumen:** Git (sistema de control de versiones distribuido) y GitHub (plataforma colaborativa sobre Git) permiten **trabajo paralelo seguro**, **historial trazable**, **revisión por pares (pull requests)**, **ramificación/merge eficientes**, **resolución de conflictos** y **automatización del flujo de trabajo**. En equipos de 3+ personas esto reduce fricciones, mejora la calidad del código y acelera entregas.
+**Resumen:** Git (sistema de control de versiones distribuido) y GitHub (plataforma colaborativa sobre Git) permiten trabajo paralelo seguro, **historial trazable**, **revisión por pares (pull requests)**, **ramificación/merge eficientes**, **resolución de conflictos** y **automatización del flujo de trabajo**. En equipos de 3+ personas esto reduce fricciones, mejora la calidad del código y acelera entregas.
 
 ### 1) Beneficios de usar Git (DVCS)
 - **Trabajo distribuido y offline**: cada integrante tiene el historial completo local, puede *commit/branch/merge* sin conexión y sincronizar después. Esto hace rápidas las operaciones y resiliente al fallo del servidor. [1][2][6]
