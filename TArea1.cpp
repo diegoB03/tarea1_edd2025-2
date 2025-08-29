@@ -19,26 +19,27 @@ struct Dato {
 //Funcion 1. Funcion que permita leer el archivo datos.dat y cargarlo en memoria dinamica.
 
 Dato* Leer_archivo(const string &nombre_archivo){
-    unsigned long N; 
+    unsigned int N; 
     ifstream ar;
     //int i;
     Dato *datosBrutos;
     ar.open("datos.dat", ios::binary);
     if (!ar.is_open()) {
         cout << "Error al abrir el archivo" << endl;
-        return 1;
+        break;
     }
 
-    ar.read((char*)&N, sizeof(unsigned long));
+    ar.read((char*)&N, sizeof(unsigned int));
     datosBrutos = new Dato[N];
     ar.read((char*)datosBrutos, sizeof(Dato)*N);
     ar.close();
 
-    cout << datosBrutos->Nombre[0] << endl;
+    return datosBrutos;
 }
 
 
 int main(){
-    Leer_archivo();
+    Leer_archivo("datos.dat");
+    cout << datosBrutos[0].Nombre << endl;
     return 0;
 }
